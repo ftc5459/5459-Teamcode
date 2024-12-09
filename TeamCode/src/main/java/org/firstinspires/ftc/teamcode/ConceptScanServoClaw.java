@@ -50,7 +50,7 @@ import com.qualcomm.robotcore.hardware.Servo;
  */
 @TeleOp(name = "Concept: Scan Servo", group = "Concept")
 @Disabled
-public class ConceptScanServo extends LinearOpMode {
+public class ConceptScanServoClaw extends LinearOpMode {
 
     static final double INCREMENT   = 0.01;     // amount to slew servo each CYCLE_MS cycle
     static final int    CYCLE_MS    =   50;     // period of each cycle
@@ -68,7 +68,7 @@ public class ConceptScanServo extends LinearOpMode {
 
         // Connect to servo (Assume Robot Left Hand)
         // Change the text in quotes to match any servo name on your robot.
-        servo = hardwareMap.get(Servo.class, "left_hand");
+        servo = hardwareMap.get(Servo.class, "claw_servo");
 
         // Wait for the start button
         telemetry.addData(">", "Press Start to scan Servo." );
